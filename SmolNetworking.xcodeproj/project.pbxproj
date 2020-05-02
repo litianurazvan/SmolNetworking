@@ -13,7 +13,50 @@
 		B25C1C0A245DB2A300D38D4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B25C1C09245DB2A300D38D4F /* Assets.xcassets */; };
 		B25C1C0D245DB2A300D38D4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B25C1C0C245DB2A300D38D4F /* Preview Assets.xcassets */; };
 		B25C1C10245DB2A300D38D4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B25C1C0E245DB2A300D38D4F /* LaunchScreen.storyboard */; };
+		B25C1C20245DB33900D38D4F /* SmolNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = B25C1C1E245DB33900D38D4F /* SmolNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B25C1C23245DB33900D38D4F /* SmolNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25C1C1C245DB33900D38D4F /* SmolNetwork.framework */; };
+		B25C1C24245DB33900D38D4F /* SmolNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B25C1C1C245DB33900D38D4F /* SmolNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B25C1C38245DB37B00D38D4F /* NetworkSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C29245DB37700D38D4F /* NetworkSessionProtocol.swift */; };
+		B25C1C39245DB37C00D38D4F /* OperationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C2A245DB37700D38D4F /* OperationResult.swift */; };
+		B25C1C3A245DB37C00D38D4F /* RequestDispatcherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C2B245DB37800D38D4F /* RequestDispatcherProtocol.swift */; };
+		B25C1C3B245DB37C00D38D4F /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C2C245DB37800D38D4F /* ResponseType.swift */; };
+		B25C1C3C245DB37C00D38D4F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C2D245DB37800D38D4F /* Environment.swift */; };
+		B25C1C3D245DB37C00D38D4F /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C2E245DB37900D38D4F /* RequestMethod.swift */; };
+		B25C1C3E245DB37C00D38D4F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C2F245DB37900D38D4F /* Helpers.swift */; };
+		B25C1C3F245DB37C00D38D4F /* OperationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C30245DB37900D38D4F /* OperationProtocol.swift */; };
+		B25C1C40245DB37C00D38D4F /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C31245DB37A00D38D4F /* RequestProtocol.swift */; };
+		B25C1C41245DB37C00D38D4F /* APIRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C32245DB37A00D38D4F /* APIRequestDispatcher.swift */; };
+		B25C1C42245DB37C00D38D4F /* APINetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C33245DB37A00D38D4F /* APINetworkSession.swift */; };
+		B25C1C43245DB37C00D38D4F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C34245DB37B00D38D4F /* APIError.swift */; };
+		B25C1C44245DB37C00D38D4F /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C35245DB37B00D38D4F /* RequestType.swift */; };
+		B25C1C45245DB37C00D38D4F /* BooksEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C36245DB37B00D38D4F /* BooksEndpoint.swift */; };
+		B25C1C46245DB37C00D38D4F /* APIOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C37245DB37B00D38D4F /* APIOperation.swift */; };
+		B25C1C49245DB51500D38D4F /* EnvironmentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C48245DB51500D38D4F /* EnvironmentProtocol.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B25C1C21245DB33900D38D4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B25C1BF8245DB29E00D38D4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B25C1C1B245DB33900D38D4F;
+			remoteInfo = SmolNetwork;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B25C1C28245DB33900D38D4F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B25C1C24245DB33900D38D4F /* SmolNetwork.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B25C1C00245DB29E00D38D4F /* SmolNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmolNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +67,38 @@
 		B25C1C0C245DB2A300D38D4F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B25C1C0F245DB2A300D38D4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B25C1C11245DB2A300D38D4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B25C1C1C245DB33900D38D4F /* SmolNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SmolNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B25C1C1E245DB33900D38D4F /* SmolNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmolNetwork.h; sourceTree = "<group>"; };
+		B25C1C1F245DB33900D38D4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B25C1C29245DB37700D38D4F /* NetworkSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSessionProtocol.swift; sourceTree = "<group>"; };
+		B25C1C2A245DB37700D38D4F /* OperationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationResult.swift; sourceTree = "<group>"; };
+		B25C1C2B245DB37800D38D4F /* RequestDispatcherProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestDispatcherProtocol.swift; sourceTree = "<group>"; };
+		B25C1C2C245DB37800D38D4F /* ResponseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
+		B25C1C2D245DB37800D38D4F /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		B25C1C2E245DB37900D38D4F /* RequestMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
+		B25C1C2F245DB37900D38D4F /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		B25C1C30245DB37900D38D4F /* OperationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationProtocol.swift; sourceTree = "<group>"; };
+		B25C1C31245DB37A00D38D4F /* RequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		B25C1C32245DB37A00D38D4F /* APIRequestDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestDispatcher.swift; sourceTree = "<group>"; };
+		B25C1C33245DB37A00D38D4F /* APINetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APINetworkSession.swift; sourceTree = "<group>"; };
+		B25C1C34245DB37B00D38D4F /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		B25C1C35245DB37B00D38D4F /* RequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		B25C1C36245DB37B00D38D4F /* BooksEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksEndpoint.swift; sourceTree = "<group>"; };
+		B25C1C37245DB37B00D38D4F /* APIOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIOperation.swift; sourceTree = "<group>"; };
+		B25C1C47245DB3E400D38D4F /* PracticeNetwork.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PracticeNetwork.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B25C1C48245DB51500D38D4F /* EnvironmentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B25C1BFD245DB29E00D38D4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25C1C23245DB33900D38D4F /* SmolNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B25C1C19245DB33900D38D4F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,7 +111,9 @@
 		B25C1BF7245DB29E00D38D4F = {
 			isa = PBXGroup;
 			children = (
+				B25C1C47245DB3E400D38D4F /* PracticeNetwork.playground */,
 				B25C1C02245DB29E00D38D4F /* SmolNetworking */,
+				B25C1C1D245DB33900D38D4F /* SmolNetwork */,
 				B25C1C01245DB29E00D38D4F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				B25C1C00245DB29E00D38D4F /* SmolNetworking.app */,
+				B25C1C1C245DB33900D38D4F /* SmolNetwork.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,7 +149,51 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B25C1C1D245DB33900D38D4F /* SmolNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				B25C1C36245DB37B00D38D4F /* BooksEndpoint.swift */,
+				B25C1C34245DB37B00D38D4F /* APIError.swift */,
+				B25C1C33245DB37A00D38D4F /* APINetworkSession.swift */,
+				B25C1C37245DB37B00D38D4F /* APIOperation.swift */,
+				B25C1C32245DB37A00D38D4F /* APIRequestDispatcher.swift */,
+				B25C1C2D245DB37800D38D4F /* Environment.swift */,
+				B25C1C2F245DB37900D38D4F /* Helpers.swift */,
+				B25C1C29245DB37700D38D4F /* NetworkSessionProtocol.swift */,
+				B25C1C30245DB37900D38D4F /* OperationProtocol.swift */,
+				B25C1C2A245DB37700D38D4F /* OperationResult.swift */,
+				B25C1C2B245DB37800D38D4F /* RequestDispatcherProtocol.swift */,
+				B25C1C2E245DB37900D38D4F /* RequestMethod.swift */,
+				B25C1C31245DB37A00D38D4F /* RequestProtocol.swift */,
+				B25C1C35245DB37B00D38D4F /* RequestType.swift */,
+				B25C1C2C245DB37800D38D4F /* ResponseType.swift */,
+				B25C1C48245DB51500D38D4F /* EnvironmentProtocol.swift */,
+				B25C1C4B245DB71000D38D4F /* Framework */,
+			);
+			path = SmolNetwork;
+			sourceTree = "<group>";
+		};
+		B25C1C4B245DB71000D38D4F /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				B25C1C1E245DB33900D38D4F /* SmolNetwork.h */,
+				B25C1C1F245DB33900D38D4F /* Info.plist */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B25C1C17245DB33900D38D4F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25C1C20245DB33900D38D4F /* SmolNetwork.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		B25C1BFF245DB29E00D38D4F /* SmolNetworking */ = {
@@ -85,15 +203,35 @@
 				B25C1BFC245DB29E00D38D4F /* Sources */,
 				B25C1BFD245DB29E00D38D4F /* Frameworks */,
 				B25C1BFE245DB29E00D38D4F /* Resources */,
+				B25C1C28245DB33900D38D4F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B25C1C22245DB33900D38D4F /* PBXTargetDependency */,
 			);
 			name = SmolNetworking;
 			productName = SmolNetworking;
 			productReference = B25C1C00245DB29E00D38D4F /* SmolNetworking.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B25C1C1B245DB33900D38D4F /* SmolNetwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B25C1C25245DB33900D38D4F /* Build configuration list for PBXNativeTarget "SmolNetwork" */;
+			buildPhases = (
+				B25C1C17245DB33900D38D4F /* Headers */,
+				B25C1C18245DB33900D38D4F /* Sources */,
+				B25C1C19245DB33900D38D4F /* Frameworks */,
+				B25C1C1A245DB33900D38D4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmolNetwork;
+			productName = SmolNetwork;
+			productReference = B25C1C1C245DB33900D38D4F /* SmolNetwork.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -106,6 +244,9 @@
 				ORGANIZATIONNAME = "Razvan Litianu";
 				TargetAttributes = {
 					B25C1BFF245DB29E00D38D4F = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					B25C1C1B245DB33900D38D4F = {
 						CreatedOnToolsVersion = 11.4;
 					};
 				};
@@ -124,6 +265,7 @@
 			projectRoot = "";
 			targets = (
 				B25C1BFF245DB29E00D38D4F /* SmolNetworking */,
+				B25C1C1B245DB33900D38D4F /* SmolNetwork */,
 			);
 		};
 /* End PBXProject section */
@@ -136,6 +278,13 @@
 				B25C1C10245DB2A300D38D4F /* LaunchScreen.storyboard in Resources */,
 				B25C1C0D245DB2A300D38D4F /* Preview Assets.xcassets in Resources */,
 				B25C1C0A245DB2A300D38D4F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B25C1C1A245DB33900D38D4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +301,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B25C1C18245DB33900D38D4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25C1C40245DB37C00D38D4F /* RequestProtocol.swift in Sources */,
+				B25C1C46245DB37C00D38D4F /* APIOperation.swift in Sources */,
+				B25C1C3A245DB37C00D38D4F /* RequestDispatcherProtocol.swift in Sources */,
+				B25C1C44245DB37C00D38D4F /* RequestType.swift in Sources */,
+				B25C1C3E245DB37C00D38D4F /* Helpers.swift in Sources */,
+				B25C1C41245DB37C00D38D4F /* APIRequestDispatcher.swift in Sources */,
+				B25C1C39245DB37C00D38D4F /* OperationResult.swift in Sources */,
+				B25C1C43245DB37C00D38D4F /* APIError.swift in Sources */,
+				B25C1C3B245DB37C00D38D4F /* ResponseType.swift in Sources */,
+				B25C1C42245DB37C00D38D4F /* APINetworkSession.swift in Sources */,
+				B25C1C45245DB37C00D38D4F /* BooksEndpoint.swift in Sources */,
+				B25C1C49245DB51500D38D4F /* EnvironmentProtocol.swift in Sources */,
+				B25C1C38245DB37B00D38D4F /* NetworkSessionProtocol.swift in Sources */,
+				B25C1C3F245DB37C00D38D4F /* OperationProtocol.swift in Sources */,
+				B25C1C3D245DB37C00D38D4F /* RequestMethod.swift in Sources */,
+				B25C1C3C245DB37C00D38D4F /* Environment.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B25C1C22245DB33900D38D4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B25C1C1B245DB33900D38D4F /* SmolNetwork */;
+			targetProxy = B25C1C21245DB33900D38D4F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B25C1C0E245DB2A300D38D4F /* LaunchScreen.storyboard */ = {
@@ -283,6 +463,7 @@
 		B25C1C15245DB2A300D38D4F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SmolNetworking/Preview Content\"";
@@ -303,6 +484,7 @@
 		B25C1C16245DB2A300D38D4F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SmolNetworking/Preview Content\"";
@@ -317,6 +499,60 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B25C1C26245DB33900D38D4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = E4H46QLP23;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SmolNetwork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.razvanlitianu.SmolNetwork;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B25C1C27245DB33900D38D4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = E4H46QLP23;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SmolNetwork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.razvanlitianu.SmolNetwork;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -337,6 +573,15 @@
 			buildConfigurations = (
 				B25C1C15245DB2A300D38D4F /* Debug */,
 				B25C1C16245DB2A300D38D4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B25C1C25245DB33900D38D4F /* Build configuration list for PBXNativeTarget "SmolNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B25C1C26245DB33900D38D4F /* Debug */,
+				B25C1C27245DB33900D38D4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
