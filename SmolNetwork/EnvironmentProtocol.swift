@@ -16,3 +16,7 @@ public protocol EnvironmentProtocol {
     /// The base URL of the environment.
     var baseURL: String { get }
 }
+
+extension EnvironmentProtocol {
+    public var headers: RequestHeaders? { return nil }
+}

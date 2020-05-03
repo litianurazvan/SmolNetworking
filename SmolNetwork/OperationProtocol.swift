@@ -11,7 +11,7 @@ internal protocol OperationProtocol {
     /// - Parameters:
     ///   - requestDispatcher: `RequestDispatcherProtocol` object that will execute the request.
     ///   - completion: Completion block.
-    func execute(in requestDispatcher: APIRequestDispatcher, completion: @escaping (OperationResult<Output>) -> Void) ->  Void
+    func execute(in requestDispatcher: APIRequestDispatcher, completion: @escaping (Result<Output, Error>) -> Void) ->  Void
 
     /// Cancel the operation.
     func cancel() -> Void

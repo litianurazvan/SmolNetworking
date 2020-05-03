@@ -24,7 +24,7 @@ public class APIOperation<Output: Decodable>: OperationProtocol {
     /// - Parameters:
     ///   - requestDispatcher: `RequestDispatcherProtocol` object that will execute the request.
     ///   - completion: Completion block.
-    public func execute(in requestDispatcher: APIRequestDispatcher, completion: @escaping (OperationResult<Output>) -> Void) {
+    public func execute(in requestDispatcher: APIRequestDispatcher, completion: @escaping (Result<Output, Error>) -> Void) {
         task = requestDispatcher.execute(Output.self, request: request, completion: completion)
     }
 }

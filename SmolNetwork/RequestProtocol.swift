@@ -26,6 +26,7 @@ public protocol RequestProtocol {
 }
 
 extension RequestProtocol {
+    public var parameters: RequestParameters? { return nil }
     public var headers: RequestHeaders? { return nil }
     public var progressHandler: ProgressHandler? { set {} get { return nil } }
 }

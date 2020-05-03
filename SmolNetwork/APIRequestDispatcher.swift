@@ -23,10 +23,10 @@ public final class APIRequestDispatcher {
     /// - Parameters:
     ///   - request: Instance conforming to `RequestProtocol`
     ///   - completion: Completion handler.
-    public func execute<Output>(_ output: Output.Type, request: RequestProtocol, completion: @escaping (OperationResult<Output>) -> Void) -> URLSessionTask? {
+    public func execute<Output: Decodable>(_ output: Output.Type, request: RequestProtocol, completion: @escaping (Result<Output, Error>) -> Void) -> URLSessionTask? {
         // Create a URL request.
         guard var urlRequest = request.urlRequest(with: environment) else {
-            completion(.error(APIError.badRequest("Invalid URL for: \(request)"), nil))
+            completion(.failure(APIError.badRequest("Invalid URL for: \(request)")))
             return nil
         }
         // Add the environment specific headers.
@@ -40,32 +40,22 @@ public final class APIRequestDispatcher {
         case .data:
             task = networkSession.dataTask(with: urlRequest, completionHandler: { [weak self] (data, urlResponse, error) in
                 guard let self = self else { return }
-                self.handleJsonTaskResponse(output, data: data, urlResponse: urlResponse, error: error) { completion(self.bridge($0)) }
+                self.handleJsonTaskResponse(output, data: data, urlResponse: urlResponse, error: error, completion: completion)
             })
         case .download:
             task = networkSession.downloadTask(request: urlRequest, progressHandler: request.progressHandler, completionHandler: { [weak self] (fileUrl, urlResponse, error) in
-                self?.handleFileTaskResponse(fileUrl: fileUrl, urlResponse: urlResponse, error: error, completion: completion as! (OperationResult<URL>) -> Void)
+                self?.handleFileTaskResponse(fileUrl: fileUrl, urlResponse: urlResponse, error: error, completion: completion as! (Result<URL, Error>) -> Void)
             })
         case .upload:
             task = networkSession.uploadTask(with: urlRequest, from: URL(fileURLWithPath: ""), progressHandler: request.progressHandler, completion: { [weak self] (data, urlResponse, error) in
                 guard let self = self else { return }
-                self.handleJsonTaskResponse(output, data: data, urlResponse: urlResponse, error: error) { completion(self.bridge($0)) }
+                self.handleJsonTaskResponse(output, data: data, urlResponse: urlResponse, error: error, completion: completion)
             })
         }
         // Start the task.
         task?.resume()
         
         return task
-    }
-    
-    
-    private func bridge<T>(_ result: (Result<T, Error>)) -> (OperationResult<T>) {
-        switch result {
-        case let .success(response):
-            return .json(response, nil)
-        case let .failure(error):
-            return .error(error, nil)
-        }
     }
     
     /// Handles the data response that is expected as a JSON object output.
@@ -102,20 +92,13 @@ public final class APIRequestDispatcher {
     ///   - urlResponse: The received  optional `URLResponse` instance.
     ///   - error: The received  optional `Error` instance.
     ///   - completion: Completion handler.
-    private func handleFileTaskResponse(fileUrl: URL?, urlResponse: URLResponse?, error: Error?, completion: @escaping (OperationResult<URL>) -> Void) {
-        guard let urlResponse = urlResponse as? HTTPURLResponse else {
-            completion(OperationResult.error(APIError.invalidResponse, nil))
+    private func handleFileTaskResponse(fileUrl: URL?, urlResponse: URLResponse?, error: Error?, completion: @escaping (Result<URL, Error>) -> Void) {
+        guard let urlResponse = urlResponse as? HTTPURLResponse, let fileUrl = fileUrl else {
+            completion(.failure(APIError.invalidResponse))
             return
         }
         
-        let result = verify(data: fileUrl, urlResponse: urlResponse, error: error)
-        switch result {
-        case .success(let url):
-            completion(.file(url, urlResponse))
-            
-        case .failure(let error):
-            completion(.error(error, urlResponse))
-        }
+        completion(verify(data: fileUrl, urlResponse: urlResponse, error: error))
     }
     
     /// Checks if the HTTP status code is valid and returns an error otherwise.
