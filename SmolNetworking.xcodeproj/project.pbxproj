@@ -18,7 +18,6 @@
 		B25C1C24245DB33900D38D4F /* SmolNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B25C1C1C245DB33900D38D4F /* SmolNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B25C1C38245DB37B00D38D4F /* NetworkSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C29245DB37700D38D4F /* NetworkSessionProtocol.swift */; };
 		B25C1C39245DB37C00D38D4F /* OperationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C2A245DB37700D38D4F /* OperationResult.swift */; };
-		B25C1C3A245DB37C00D38D4F /* RequestDispatcherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C2B245DB37800D38D4F /* RequestDispatcherProtocol.swift */; };
 		B25C1C3B245DB37C00D38D4F /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C2C245DB37800D38D4F /* ResponseType.swift */; };
 		B25C1C3C245DB37C00D38D4F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C2D245DB37800D38D4F /* Environment.swift */; };
 		B25C1C3D245DB37C00D38D4F /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C2E245DB37900D38D4F /* RequestMethod.swift */; };
@@ -29,7 +28,7 @@
 		B25C1C42245DB37C00D38D4F /* APINetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C33245DB37A00D38D4F /* APINetworkSession.swift */; };
 		B25C1C43245DB37C00D38D4F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C34245DB37B00D38D4F /* APIError.swift */; };
 		B25C1C44245DB37C00D38D4F /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C35245DB37B00D38D4F /* RequestType.swift */; };
-		B25C1C45245DB37C00D38D4F /* BooksEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C36245DB37B00D38D4F /* BooksEndpoint.swift */; };
+		B25C1C45245DB37C00D38D4F /* TodoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C36245DB37B00D38D4F /* TodoEndpoint.swift */; };
 		B25C1C46245DB37C00D38D4F /* APIOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C37245DB37B00D38D4F /* APIOperation.swift */; };
 		B25C1C49245DB51500D38D4F /* EnvironmentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C1C48245DB51500D38D4F /* EnvironmentProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -72,7 +71,6 @@
 		B25C1C1F245DB33900D38D4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B25C1C29245DB37700D38D4F /* NetworkSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSessionProtocol.swift; sourceTree = "<group>"; };
 		B25C1C2A245DB37700D38D4F /* OperationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationResult.swift; sourceTree = "<group>"; };
-		B25C1C2B245DB37800D38D4F /* RequestDispatcherProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestDispatcherProtocol.swift; sourceTree = "<group>"; };
 		B25C1C2C245DB37800D38D4F /* ResponseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
 		B25C1C2D245DB37800D38D4F /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		B25C1C2E245DB37900D38D4F /* RequestMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
@@ -83,7 +81,7 @@
 		B25C1C33245DB37A00D38D4F /* APINetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APINetworkSession.swift; sourceTree = "<group>"; };
 		B25C1C34245DB37B00D38D4F /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		B25C1C35245DB37B00D38D4F /* RequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
-		B25C1C36245DB37B00D38D4F /* BooksEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksEndpoint.swift; sourceTree = "<group>"; };
+		B25C1C36245DB37B00D38D4F /* TodoEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoEndpoint.swift; sourceTree = "<group>"; };
 		B25C1C37245DB37B00D38D4F /* APIOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIOperation.swift; sourceTree = "<group>"; };
 		B25C1C47245DB3E400D38D4F /* PracticeNetwork.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PracticeNetwork.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B25C1C48245DB51500D38D4F /* EnvironmentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentProtocol.swift; sourceTree = "<group>"; };
@@ -152,7 +150,7 @@
 		B25C1C1D245DB33900D38D4F /* SmolNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				B25C1C36245DB37B00D38D4F /* BooksEndpoint.swift */,
+				B25C1C36245DB37B00D38D4F /* TodoEndpoint.swift */,
 				B25C1C34245DB37B00D38D4F /* APIError.swift */,
 				B25C1C33245DB37A00D38D4F /* APINetworkSession.swift */,
 				B25C1C37245DB37B00D38D4F /* APIOperation.swift */,
@@ -162,7 +160,6 @@
 				B25C1C29245DB37700D38D4F /* NetworkSessionProtocol.swift */,
 				B25C1C30245DB37900D38D4F /* OperationProtocol.swift */,
 				B25C1C2A245DB37700D38D4F /* OperationResult.swift */,
-				B25C1C2B245DB37800D38D4F /* RequestDispatcherProtocol.swift */,
 				B25C1C2E245DB37900D38D4F /* RequestMethod.swift */,
 				B25C1C31245DB37A00D38D4F /* RequestProtocol.swift */,
 				B25C1C35245DB37B00D38D4F /* RequestType.swift */,
@@ -307,7 +304,6 @@
 			files = (
 				B25C1C40245DB37C00D38D4F /* RequestProtocol.swift in Sources */,
 				B25C1C46245DB37C00D38D4F /* APIOperation.swift in Sources */,
-				B25C1C3A245DB37C00D38D4F /* RequestDispatcherProtocol.swift in Sources */,
 				B25C1C44245DB37C00D38D4F /* RequestType.swift in Sources */,
 				B25C1C3E245DB37C00D38D4F /* Helpers.swift in Sources */,
 				B25C1C41245DB37C00D38D4F /* APIRequestDispatcher.swift in Sources */,
@@ -315,7 +311,7 @@
 				B25C1C43245DB37C00D38D4F /* APIError.swift in Sources */,
 				B25C1C3B245DB37C00D38D4F /* ResponseType.swift in Sources */,
 				B25C1C42245DB37C00D38D4F /* APINetworkSession.swift in Sources */,
-				B25C1C45245DB37C00D38D4F /* BooksEndpoint.swift in Sources */,
+				B25C1C45245DB37C00D38D4F /* TodoEndpoint.swift in Sources */,
 				B25C1C49245DB51500D38D4F /* EnvironmentProtocol.swift in Sources */,
 				B25C1C38245DB37B00D38D4F /* NetworkSessionProtocol.swift in Sources */,
 				B25C1C3F245DB37C00D38D4F /* OperationProtocol.swift in Sources */,

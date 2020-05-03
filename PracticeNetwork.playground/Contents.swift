@@ -1,17 +1,27 @@
 import SmolNetwork
+import PlaygroundSupport
 import Foundation
 
-let requestDispatcher = APIRequestDispatcher(environment: Environment.development, networkSession: APINetworkSession())
-let params: [String : Any] = [
-   "name": "Gone with the wind",
-   "author": "Margaret Mitchell"
-]
+let requestDispatcher = APIRequestDispatcher(
+    environment: Environment.development,
+    networkSession: APINetworkSession()
+)
 
-let bookCreationRequest = BooksEndpoint.create(parameters: params)
-
-let bookOperation = APIOperation(bookCreationRequest)
-bookOperation.execute(in: requestDispatcher) { result in
-  // Handle result
-    print(result)
+struct Todo: Codable {
+    let userId: Int
+    let id: Int
+    let title: String
+    let completed: Bool
 }
 
+let todoCreationRequest = TodoEndpoint.todo(identifier: 1)
+
+let todoOperation = APIOperation<Todo>(todoCreationRequest)
+todoOperation.execute(in: requestDispatcher) { result in
+  // Handle result
+    DispatchQueue.main.async {
+        print(result)
+    }
+}
+
+PlaygroundPage.current.needsIndefiniteExecution = true

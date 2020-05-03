@@ -13,10 +13,7 @@ extension Environment : EnvironmentProtocol {
     public var headers: RequestHeaders? {
         switch self {
         case .development:
-            return [
-                "Content-Type" : "application/json",
-                "Authorization" : "Bearer yourBearerToken"
-            ]
+            return [:]
         case .production:
             return [:]
         }
@@ -26,7 +23,7 @@ extension Environment : EnvironmentProtocol {
     public var baseURL: String {
         switch self {
         case .development:
-            return "http://api.localhost:3000/v1/"
+            return "https://jsonplaceholder.typicode.com"
         case .production:
             return "https://api.yourapp.com/v1/"
         }

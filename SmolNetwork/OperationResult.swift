@@ -1,9 +1,9 @@
 import Foundation
 
 /// The expected result of an API Operation.
-public enum OperationResult {
+public enum OperationResult<Response: Decodable> {
     /// JSON reponse.
-    case json(_ : Any?, _ : HTTPURLResponse?)
+    case json(_ : Response, _ : HTTPURLResponse?)
     /// A downloaded file with an URL.
     case file(_ : URL?, _ : HTTPURLResponse?)
     /// An error.

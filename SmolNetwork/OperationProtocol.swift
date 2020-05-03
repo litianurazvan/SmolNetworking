@@ -2,7 +2,7 @@ import Foundation
 
 /// The type to which all operations must conform in order to execute and cancel a request.
 internal protocol OperationProtocol {
-    associatedtype Output
+    associatedtype Output: Decodable
 
     /// The request to be executed.
     var request: RequestProtocol { get }
@@ -11,7 +11,7 @@ internal protocol OperationProtocol {
     /// - Parameters:
     ///   - requestDispatcher: `RequestDispatcherProtocol` object that will execute the request.
     ///   - completion: Completion block.
-    func execute(in requestDispatcher: RequestDispatcherProtocol, completion: @escaping (Output) -> Void) ->  Void
+    func execute(in requestDispatcher: APIRequestDispatcher, completion: @escaping (OperationResult<Output>) -> Void) ->  Void
 
     /// Cancel the operation.
     func cancel() -> Void
